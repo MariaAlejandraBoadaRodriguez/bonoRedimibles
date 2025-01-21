@@ -1,0 +1,86 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de bonos */
+  .bonos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Bono */
+  .bono {
+    perspective: 1000px;
+  }
+  
+  .bono-content {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    cursor: pointer;
+  }
+  
+  .bono:hover .bono-content {
+    transform: rotateY(180deg);
+  }
+  
+  .bono .front,
+  .bono .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .bono .front {
+    background-color: #ffde59;
+  }
+  
+  .bono .back {
+    background-color: #4caf50;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  /* Botón */
+  .redeem-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .redeem-btn:hover {
+    background-color: #d32f2f;
+  }
+  
